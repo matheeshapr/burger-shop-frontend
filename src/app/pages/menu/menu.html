@@ -3,7 +3,7 @@
     <i class="bi bi-search"></i>
     <input type="text" placeholder="Search your favorite burger...">
   </div>
-  
+
   <div class="category-pills">
     <button class="pill active">All</button>
     <button class="pill">Beef</button>
@@ -18,121 +18,15 @@
     <h2>Explore Our <span class="highlight">Juicy Burgers</span> 🍔</h2>
     <p>Handcrafted burgers made with fresh ingredients every day.</p>
   </div>
+</div>
 
-  <div class="burger-grid">
-    <div class="burger-card">
-      <div class="badge">Best Seller</div>
-      <div class="image-section">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500" alt="Cheese Burger">
-      </div>
-      <div class="details">
-        <h3>Classic Cheese Burger</h3>
-        <p>Double beef patty, cheddar cheese, and our secret sauce.</p>
-        <div class="card-footer">
-          <span class="price">Rs. 1,450.00</span>
-          <button class="add-btn"><i class="bi bi-plus-lg"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="burger-card">
-      <div class="image-section">
-        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=500" alt="Chicken Burger">
-      </div>
-      <div class="details">
-        <h3>Crispy Zinger Burger</h3>
-        <p>Crunchy chicken breast with spicy mayo and lettuce.</p>
-        <div class="card-footer">
-          <span class="price">Rs. 1,150.00</span>
-          <button class="add-btn"><i class="bi bi-plus-lg"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="burger-card">
-      <div class="image-section">
-        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=500" alt="BBQ Burger">
-      </div>
-      <div class="details">
-        <h3>BBQ Smokehouse</h3>
-        <p>Grilled beef, crispy bacon, and smoky BBQ glaze.</p>
-        <div class="card-footer">
-          <span class="price">Rs. 1,750.00</span>
-          <button class="add-btn"><i class="bi bi-plus-lg"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="burger-card">
-      <div class="badge">Huge</div>
-      <div class="image-section">
-        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=500" alt="Monster Burger">
-      </div>
-      <div class="details">
-        <h3>The Monster Beef</h3>
-        <p>Triple beef patty with extra layers of bacon and fried egg.</p>
-        <div class="card-footer">
-          <span class="price">Rs. 2,150.00</span>
-          <button class="add-btn"><i class="bi bi-plus-lg"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="burger-card">
-      <div class="image-section">
-        <img src="https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=500" alt="Veggie Burger">
-      </div>
-      <div class="details">
-        <h3>Garden Veggie</h3>
-        <p>Crispy vegetable patty, avocado slices, and honey mustard.</p>
-        <div class="card-footer">
-          <span class="price">Rs. 850.00</span>
-          <button class="add-btn"><i class="bi bi-plus-lg"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="burger-card">
-      <div class="image-section">
-        <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=500" alt="Shrimp Burger">
-      </div>
-      <div class="details">
-        <h3>Oceanic Shrimp</h3>
-        <p>Grilled golden shrimp with tartar sauce and fresh dill.</p>
-        <div class="card-footer">
-          <span class="price">Rs. 1,650.00</span>
-          <button class="add-btn"><i class="bi bi-plus-lg"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="burger-card">
-      <div class="image-section">
-        <img src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?q=80&w=500" alt="Mushroom Burger">
-      </div>
-      <div class="details">
-        <h3>Mushroom Swiss</h3>
-        <p>Juicy patty topped with sautéed mushrooms and Swiss cheese.</p>
-        <div class="card-footer">
-          <span class="price">Rs. 1,350.00</span>
-          <button class="add-btn"><i class="bi bi-plus-lg"></i></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="burger-card">
-      <div class="badge">Hot</div>
-      <div class="image-section">
-        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=500" alt="Hawaiian Burger">
-      </div>
-      <div class="details">
-        <h3>Spicy Hawaiian</h3>
-        <p>Grilled pineapple, jalapeños, and sweet chili chicken patty.</p>
-        <div class="card-footer">
-          <span class="price">Rs. 1,200.00</span>
-          <button class="add-btn"><i class="bi bi-plus-lg"></i></button>
-        </div>
-      </div>
-    </div>
+<div class="burger-grid">
+  <div class="burger-card" *ngFor="let i of itemList">
+    <img [src]="i.imageUrl" alt="burger">
+    <h3>{{ i.name }}</h3>
+    <p>Rs. {{ i.price }}</p>
+    <button class="add-to-cart-btn">
+      <i class="bi bi-cart-plus"></i> Add to Cart
+    </button>
   </div>
 </div>
