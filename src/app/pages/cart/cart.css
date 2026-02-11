@@ -13,7 +13,6 @@
   margin-top: 40px;
 }
 
-/* Cart Item Cards */
 .cart-card {
   background: white;
   padding: 20px;
@@ -40,7 +39,6 @@
 }
 .remove-btn:hover { background: #ff4d4d; color: white; }
 
-/* Summary Box */
 .order-summary {
   background: #1a1a1a;
   color: white;
